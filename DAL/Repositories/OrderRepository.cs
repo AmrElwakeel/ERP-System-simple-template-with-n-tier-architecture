@@ -2,6 +2,7 @@
 using DAL.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace DAL.Repositories
@@ -10,5 +11,26 @@ namespace DAL.Repositories
     {
         public OrderRepository(ApplicationDbContext context):base(context)
         { }
+
+        ApplicationDbContext Context => (ApplicationDbContext)_context;
+
+        public void UpdateOrderItemPrice(OrderDetials OrderDetails)
+        {
+            var Order = FindById(OrderDetails.Order_Id);
+            var OrderItem=Order.OrderDetials.Where(a => a.Id == OrderDetails.Id).SingleOrDefault();
+
+            Order.TotalPrice = OrderDetails.Price - OrderItem.Price;
+            OrderItem.Price = OrderDetails.Price;
+        }
+
+        public void RemoveItemFromOrder(int OrderDetails)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddItemToOrder(OrderDetials OrderDetails)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
