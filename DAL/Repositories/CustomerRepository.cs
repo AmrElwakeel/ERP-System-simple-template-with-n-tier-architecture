@@ -1,7 +1,10 @@
 ﻿using DAL.Entities;
 using DAL.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace DAL.Repositories
@@ -12,7 +15,8 @@ namespace DAL.Repositories
         { }
         public IEnumerable<Customer> GetActiveCustomers()
         {
-            throw new NotImplementedException();
+            return Context.Customers.Include(a => a.Orders.Select(o => o.TotalPrice).Count()).
+              OrderBy(a => a.Orders.Select(o => o.TotalPrice).Count()).Take(10).ToList();
         }
         ApplicationDbContext Context => (ApplicationDbContext)_context;
     }
