@@ -1,9 +1,5 @@
-﻿using DAL.Entities;
-using DAL.Repositories;
+﻿using DAL.Repositories;
 using DAL.Repositories.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace DAL
@@ -22,7 +18,7 @@ namespace DAL
         {
             _context = context;
         }
-        public ICasherRepository CasherRepository 
+        public ICasherRepository CasherRepository
         {
             get
             {

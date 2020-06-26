@@ -1,17 +1,14 @@
 ﻿using DAL.Entities;
 using DAL.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Internal;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace DAL.Repositories
 {
     public class CustomerRepository : Repository<Customer>, ICustomerRepository
     {
-        public CustomerRepository(ApplicationDbContext context):base(context)
+        public CustomerRepository(ApplicationDbContext context) : base(context)
         { }
         public IEnumerable<Customer> GetActiveCustomers()
         {

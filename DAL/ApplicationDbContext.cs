@@ -2,15 +2,12 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DAL
 {
-    public class ApplicationDbContext:IdentityDbContext<IdentityUser>
+    public class ApplicationDbContext : IdentityDbContext<IdentityUser>
     {
-        public ApplicationDbContext(DbContextOptions options):base(options)
+        public ApplicationDbContext(DbContextOptions options) : base(options)
         { }
 
         public DbSet<Product> Products { get; set; }
@@ -33,8 +30,8 @@ namespace DAL
                 .WithMany(c => c.Cashers).HasForeignKey(c => c.Dept_Id)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            builder.Entity<Casher>().HasMany(c=>c.Orders)
-                .WithOne(o=>o.Casher).HasForeignKey(o=>o.Casher_Id)
+            builder.Entity<Casher>().HasMany(c => c.Orders)
+                .WithOne(o => o.Casher).HasForeignKey(o => o.Casher_Id)
             .OnDelete(DeleteBehavior.Restrict);
 
             builder.Entity<Customer>().Property(a => a.TotalTransactionsAmount).HasColumnType("float");
