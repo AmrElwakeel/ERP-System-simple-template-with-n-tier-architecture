@@ -1,15 +1,13 @@
 ﻿using DAL.Entities;
 using DAL.Repositories.Interfaces;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace DAL.Repositories
 {
-    class OrderRepository:Repository<Order>, IOrderRepository
+    class OrderRepository : Repository<Order>, IOrderRepository
     {
-        public OrderRepository(ApplicationDbContext context):base(context)
+        public OrderRepository(ApplicationDbContext context) : base(context)
         { }
 
         ApplicationDbContext Context => (ApplicationDbContext)_context;
@@ -17,7 +15,7 @@ namespace DAL.Repositories
         public void UpdateOrderItemPrice(OrderDetials OrderDetails)
         {
             var Order = FindById(OrderDetails.Order_Id);
-            var OrderItem=Order.OrderDetials.Where(a => a.Id == OrderDetails.Id).SingleOrDefault();
+            var OrderItem = Order.OrderDetials.Where(a => a.Id == OrderDetails.Id).SingleOrDefault();
 
             Order.TotalPrice = OrderDetails.Price - OrderItem.Price;
             OrderItem.Price = OrderDetails.Price;
