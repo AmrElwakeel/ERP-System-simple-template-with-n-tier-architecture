@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DAL
 {
@@ -12,6 +13,6 @@ namespace DAL
         IDepartmentRepository DepartmentRepository { get;}
         IOrderRepository OrderRepository { get;}
         IProductRepository ProductRepository { get;}
-        bool SaveChanges();
+        Task<bool> SaveChanges();
     }
 }

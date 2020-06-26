@@ -4,6 +4,7 @@ using DAL.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DAL
 {
@@ -71,9 +72,9 @@ namespace DAL
             }
         }
 
-        public bool SaveChanges()
+        public async Task<bool> SaveChanges()
         {
-            return (_context.SaveChanges() >= 1);
+            return await _context.SaveChangesAsync() >= 1;
         }
     }
 }
