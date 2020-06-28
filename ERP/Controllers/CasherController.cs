@@ -31,7 +31,7 @@ namespace ERP.Controllers
             return Ok(_mapper.Map<IEnumerable<CasherDto>>(allCashers));
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}",Name = "Get")]
         public IActionResult Get(int id)
         {
             var casher = _unitOfWork.CasherRepository.FindById(id);
