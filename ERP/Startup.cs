@@ -48,11 +48,10 @@ namespace ERP
             #region Swagger
             services.AddSwaggerGen(c =>
             {
-                c.IncludeXmlComments(string.Format(@"{0}\ERP.ERP.xml", System.AppDomain.CurrentDomain.BaseDirectory));
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "CQRS.WebApi",
+                    Title = "ERP",
                 });
 
             });
