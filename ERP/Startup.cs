@@ -73,6 +73,13 @@ namespace ERP
 
             app.UseAuthorization();
 
+            
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+
             #region Swagger
             app.UseSwagger();
             app.UseSwaggerUI(c =>
@@ -80,11 +87,6 @@ namespace ERP
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "ERP.ERP");
             });
             #endregion
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
         }
     }
 }
