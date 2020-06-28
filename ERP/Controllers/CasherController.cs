@@ -26,18 +26,43 @@ namespace ERP.Controllers
         public IActionResult Get()
         {
             var allCashers = _unitOfWork.CasherRepository.GetAll();
+
             return Ok(_mapper.Map<IEnumerable<CasherDto>>(allCashers));
         }
 
-        [HttpPost("{id}")]
+        [HttpGet("{id}")]
+        public IActionResult Get(int id)
+        {
+            var allCashers = _unitOfWork.CasherRepository.FindById(id);
+
+            return Ok(_mapper.Map<IEnumerable<CasherDto>>(allCashers));
+        }
+
+        //[HttpPost]
+        //public async Task<IActionResult> Create(CreateCasherDto createCasherDto)
+        //{
+        //    return CreatedAtRoute(nameof(Get), new { Id = createCasherDto.Id }, createCasherDto);
+        //}
+
+        [HttpPut("{id}")]
         public async Task<IActionResult> ChangeDepartment(int id,int dept)
         {
-            _unitOfWork.CasherRepository.ChangeCasherDepartment(id, dept);
-            if (await _unitOfWork.SaveChanges())
+            try
             {
-                return Ok();
+                if (_unitOfWork.CasherRepository.FindById(id) == null)
+                    return NotFound();
+
+                _unitOfWork.CasherRepository.ChangeCasherDepartment(id, dept);
+                if (! await _unitOfWork.SaveChanges())
+                {
+                    return BadRequest();
+                }
+                return NoContent();
             }
-            return BadRequest();
+            catch
+            {
+                return BadRequest();
+            }
         }
     }
 }
