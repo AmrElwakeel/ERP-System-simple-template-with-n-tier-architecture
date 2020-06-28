@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using DAL;
+using DAL.Entities;
 using ERP.Dto;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -33,16 +34,24 @@ namespace ERP.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            var allCashers = _unitOfWork.CasherRepository.FindById(id);
-
-            return Ok(_mapper.Map<IEnumerable<CasherDto>>(allCashers));
+            var casher = _unitOfWork.CasherRepository.FindById(id);
+            if (casher == null)
+                return NotFound();
+            return Ok(_mapper.Map<IEnumerable<CasherDto>>(casher));
         }
 
-        //[HttpPost]
-        //public async Task<IActionResult> Create(CreateCasherDto createCasherDto)
-        //{
-        //    return CreatedAtRoute(nameof(Get), new { Id = createCasherDto.Id }, createCasherDto);
-        //}
+        [HttpPost]
+        public async Task<IActionResult> Create(CreateCasherDto createCasherDto)
+        {
+            var createModel = _mapper.Map<Casher>(createCasherDto);
+            _unitOfWork.CasherRepository.Create(createModel);
+            if (!await _unitOfWork.SaveChanges())
+                return BadRequest();
+
+            createCasherDto = _mapper.Map<CreateCasherDto>(createModel);
+
+            return CreatedAtRoute(nameof(Get), new { id = createCasherDto.Id }, createCasherDto);
+        }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> ChangeDepartment(int id,int dept)

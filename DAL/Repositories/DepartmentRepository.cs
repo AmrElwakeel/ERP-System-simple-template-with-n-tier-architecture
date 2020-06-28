@@ -2,6 +2,7 @@
 using DAL.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace DAL.Repositories
@@ -10,7 +11,10 @@ namespace DAL.Repositories
     {
         public DepartmentRepository(ApplicationDbContext context):base(context)
         { }
-
+        public override IEnumerable<Department> GetAll()
+        {
+            return Context.Departments.Where(d => d.Delete == false).ToList();
+        }
         public IEnumerable<Casher> GetCashersInDept(int Dept)
         {
             return GetSingleOrDefault(a => a.Id == Dept).Cashers;
