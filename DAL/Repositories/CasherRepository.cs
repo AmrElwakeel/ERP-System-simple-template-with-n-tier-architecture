@@ -10,6 +10,10 @@ namespace DAL.Repositories
     {
         public CasherRepository(ApplicationDbContext context) : base(context)
         { }
+        public override IEnumerable<Casher> GetAll()
+        {
+            return Context.Cashers.Include(c => c.Department).Include(c => c.ApplicationUser);
+        }
         public void ChangeCasherDepartment(int Casher, int Dept)
         {
             var casher = Context.Cashers.Find(Casher);
@@ -21,6 +25,14 @@ namespace DAL.Repositories
         {
             return Context.Cashers.Include(a => a.Orders.Count())
                 .OrderByDescending(a => a.Orders.Count()).Take(count);
+        }
+
+        public IEnumerable<Casher> GetCasherAllData()
+        {
+            return Context.Cashers.Include(c => c.Orders).ThenInclude(o => o.OrderDetials).ThenInclude(ot => ot.Product)
+                .Include(c => c.Orders).ThenInclude(o => o.Customer)
+                .OrderBy(c => c.Name)
+                .ToList();
         }
 
         ApplicationDbContext Context => (ApplicationDbContext)_context;

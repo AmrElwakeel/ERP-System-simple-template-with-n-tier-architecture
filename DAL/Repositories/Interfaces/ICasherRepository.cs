@@ -8,6 +8,7 @@ namespace DAL.Repositories.Interfaces
     public interface ICasherRepository:IRepository<Casher>
     {
         IEnumerable<Casher> GetActiveCashers(int count);
+        IEnumerable<Casher> GetCasherAllData();
         void ChangeCasherDepartment(int Casher,int Dept);
     }
 }

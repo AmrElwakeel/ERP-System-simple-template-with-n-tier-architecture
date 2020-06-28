@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using DAL;
 using DAL.Entities;
+using ERP.Dto;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -43,8 +45,7 @@ namespace ERP
 
 
             services.AddControllers();
-
-
+            services.AddAutoMapper(typeof(AutoMapperProfile));
             #region Swagger
             services.AddSwaggerGen(c =>
             {

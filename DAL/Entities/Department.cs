@@ -10,7 +10,7 @@ namespace DAL.Entities
         {
             this.Cashers = new List<Casher>();
         }
-
+        public string Name { get; set; }
         public ICollection<Casher> Cashers { get; set; }
     }
 }
