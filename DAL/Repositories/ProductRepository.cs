@@ -10,5 +10,7 @@ namespace DAL.Repositories
     {
         public ProductRepository(ApplicationDbContext context):base(context)
         { }
+
+        ApplicationDbContext Context => (ApplicationDbContext)_context;
     }
 }

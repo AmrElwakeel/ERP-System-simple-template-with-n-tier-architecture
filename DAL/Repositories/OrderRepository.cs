@@ -23,12 +23,22 @@ namespace DAL.Repositories
 
         public void RemoveItemFromOrder(int OrderDetails)
         {
-            throw new NotImplementedException();
+            var OrderDetailsItem = Context.OrderDetials.Find(OrderDetails);
+            var Order = FindById(OrderDetailsItem.Order_Id);
+            Order.OrderDetials.Add(OrderDetailsItem);
+            Order.TotalPrice -= OrderDetailsItem.Price;
+            //increment product amount
+            Context.Products.Find(OrderDetailsItem.Product.Id).Amount+=1;
         }
 
         public void AddItemToOrder(OrderDetials OrderDetails)
         {
-            throw new NotImplementedException();
+            var OrderDetailsItem = Context.OrderDetials.Find(OrderDetails);
+            var Order= FindById(OrderDetailsItem.Order_Id);
+            Order.OrderDetials.Add(OrderDetailsItem);
+            Order.TotalPrice += OrderDetails.Price;
+            //decrement product amount
+            Context.Products.Find(OrderDetailsItem.Product.Id).Amount -= 1;
         }
     }
 }

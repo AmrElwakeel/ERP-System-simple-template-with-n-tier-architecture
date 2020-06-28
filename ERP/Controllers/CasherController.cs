@@ -18,10 +18,10 @@ namespace ERP.Controllers
         {
             _unitOfWork = unitOfWork;
         }
-        [HttpPost]
-        public async Task<IActionResult> ChangeDepartment(int Casher,int Dept)
+        [HttpPost("{id}")]
+        public async Task<IActionResult> ChangeDepartment(int id,int dept)
         {
-            _unitOfWork.CasherRepository.ChangeCasherDepartment(Casher, Dept);
+            _unitOfWork.CasherRepository.ChangeCasherDepartment(id, dept);
             if (await _unitOfWork.SaveChanges())
             {
                 return Ok();
