@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using DAL;
 using DAL.Entities;
-using ERP.Dto;
+using ERP.Dto.DepartmentDto;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,21 +25,21 @@ namespace ERP.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<DepartmentDto>> Get()
+        public ActionResult<IEnumerable<DepartmentViewDto>> Get()
         {
             var AllDept = _unitOfWork.DepartmentRepository.GetAll();
             
-            return Ok(_mapper.Map<IEnumerable<DepartmentDto>>(AllDept));
+            return Ok(_mapper.Map<IEnumerable<DepartmentViewDto>>(AllDept));
         }
 
-        [HttpGet("{id}",Name ="Get")]
-        public ActionResult<DepartmentDto> Get(int id)
+        [HttpGet("{id}",Name ="GetById")]
+        public ActionResult<DepartmentViewDto> Get(int id)
         {
             var Dept = _unitOfWork.DepartmentRepository.FindById(id);
             if (Dept == null)
                 return NotFound();
 
-            return Ok(_mapper.Map<DepartmentDto>(Dept));
+            return Ok(_mapper.Map<DepartmentViewDto>(Dept));
         }
 
         [HttpPost]
@@ -50,7 +50,7 @@ namespace ERP.Controllers
             if (!await _unitOfWork.SaveChanges())
                 return BadRequest();
 
-            var model = _mapper.Map<DepartmentDto>(DeptModel);
+            var model = _mapper.Map<DepartmentViewDto>(DeptModel);
 
             return CreatedAtRoute(nameof(Get), new { id = model.Id }, model);
         }

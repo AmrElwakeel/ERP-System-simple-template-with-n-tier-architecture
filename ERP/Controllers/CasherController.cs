@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using DAL;
 using DAL.Entities;
-using ERP.Dto;
+using ERP.Dto.CasherDto;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,20 +24,20 @@ namespace ERP.Controllers
             _mapper = mapper;
         }
         [HttpGet]
-        public IActionResult Get()
+        public ActionResult<IEnumerable<CasherViewDto>> Get()
         {
             var allCashers = _unitOfWork.CasherRepository.GetAll();
 
-            return Ok(_mapper.Map<IEnumerable<CasherDto>>(allCashers));
+            return Ok(_mapper.Map<IEnumerable<CasherViewDto>>(allCashers));
         }
 
-        [HttpGet("{id}",Name = "Get")]
-        public IActionResult Get(int id)
+        [HttpGet("{id}",Name ="GetById")]
+        public ActionResult<CasherViewDto> Get(int id)
         {
             var casher = _unitOfWork.CasherRepository.FindById(id);
             if (casher == null)
                 return NotFound();
-            return Ok(_mapper.Map<IEnumerable<CasherDto>>(casher));
+            return Ok(_mapper.Map<CasherViewDto>(casher));
         }
 
         [HttpPost]
@@ -48,9 +48,9 @@ namespace ERP.Controllers
             if (!await _unitOfWork.SaveChanges())
                 return BadRequest();
 
-            createCasherDto = _mapper.Map<CreateCasherDto>(createModel);
+            var GetModel = _mapper.Map<CasherViewDto>(createModel);
 
-            return CreatedAtRoute(nameof(Get), new { id = createCasherDto.Id }, createCasherDto);
+            return CreatedAtRoute(nameof(Get), new { id = GetModel.Id }, GetModel);
         }
 
         [HttpPut("{id}")]
