@@ -32,7 +32,7 @@ namespace ERP.Controllers
             return Ok(_mapper.Map<IEnumerable<DepartmentViewDto>>(AllDept));
         }
 
-        [HttpGet("{id}",Name ="GetById")]
+        [HttpGet("{id}",Name ="GetDepartmentById")]
         public ActionResult<DepartmentViewDto> Get(int id)
         {
             var Dept = _unitOfWork.DepartmentRepository.FindById(id);
