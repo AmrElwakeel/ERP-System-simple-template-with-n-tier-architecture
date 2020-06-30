@@ -33,6 +33,11 @@ namespace ERP.Dto
                 .ForMember(dest => dest.HiredDate, obj => obj.MapFrom(src => src.HiredDate))
                 .ReverseMap();
 
+            CreateMap<Casher, ActiveCashersDto>()
+                .ForMember(dest => dest.Name, obt => obt.MapFrom(dest => dest.Name))
+                .ForMember(dest => dest.Department, obt => obt.MapFrom(dest => dest.Department.Name))
+                .ForMember(dest => dest.OrdersCount, obt => obt.MapFrom(dest => dest.Orders.Count()));
+
             CreateMap<Department, DepartmentViewDto>();
             CreateMap<CreateDepartmentDto,Department>();
             CreateMap<UpdateDepartmentDto, Department>();

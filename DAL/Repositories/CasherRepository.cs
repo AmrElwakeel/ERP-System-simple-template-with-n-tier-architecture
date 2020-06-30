@@ -23,8 +23,11 @@ namespace DAL.Repositories
 
         public IEnumerable<Casher> GetActiveCashers(int count)
         {
-            return Context.Cashers.Include(a => a.Orders.Count())
-                .OrderByDescending(a => a.Orders.Count()).Take(count);
+            return Context.Cashers
+                .Include(a => a.Department)
+                .Include(a => a.Orders.Select(a => a.Id))
+                .OrderByDescending(a=>a.Orders.Sum(x=>x.TotalPrice))
+                .Take(count);
         }
 
         public IEnumerable<Casher> GetCasherAllData()

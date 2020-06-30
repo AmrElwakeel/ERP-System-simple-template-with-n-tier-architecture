@@ -40,6 +40,13 @@ namespace ERP.Controllers
             return Ok(_mapper.Map<CasherViewDto>(casher));
         }
 
+        [HttpGet("[Action]/{count}")]
+        public ActionResult<IEnumerable<ActiveCashersDto>> GetActiveEmployess(int count)
+        {
+            var model = _mapper.Map<IEnumerable<ActiveCashersDto>>(_unitOfWork.CasherRepository.GetActiveCashers(count));
+            return Ok(model);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Create(CreateCasherDto createCasherDto)
         {
@@ -53,7 +60,7 @@ namespace ERP.Controllers
             return CreatedAtRoute(nameof(Get), new { id = GetModel.Id }, GetModel);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("[Action]/{id}")]
         public async Task<IActionResult> ChangeDepartment(int id,int dept)
         {
             try
@@ -73,5 +80,10 @@ namespace ERP.Controllers
                 return BadRequest();
             }
         }
+
+
+
+
+
     }
 }
