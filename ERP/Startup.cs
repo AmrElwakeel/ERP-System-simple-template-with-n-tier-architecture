@@ -65,6 +65,14 @@ namespace ERP
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+
+                #region Swagger
+                app.UseSwagger();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "ERP.ERP");
+                });
+                #endregion
             }
 
             app.UseHttpsRedirection();
@@ -79,14 +87,6 @@ namespace ERP
             {
                 endpoints.MapControllers();
             });
-
-            #region Swagger
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "ERP.ERP");
-            });
-            #endregion
         }
     }
 }

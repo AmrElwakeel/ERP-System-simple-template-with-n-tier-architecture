@@ -25,8 +25,8 @@ namespace DAL.Repositories
         {
             return Context.Cashers
                 .Include(a => a.Department)
-                .Include(a => a.Orders.Select(a => a.Id))
-                .OrderByDescending(a=>a.Orders.Sum(x=>x.TotalPrice))
+                .Include(a => a.Orders)
+                .OrderByDescending(a=>a.Orders.Count())
                 .Take(count);
         }
 
