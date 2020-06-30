@@ -14,6 +14,10 @@ namespace DAL.Entities
             }
         }
         public Gender Gender { get; set; }
+
+        //public ICollection<IdentityUserClaim<string>> Claims { get; set; }
+        //public ICollection<IdentityUserRole<string>> Roles { get; set; }
+
         public virtual Casher Casher { get; set; }
     }
     public enum Gender
