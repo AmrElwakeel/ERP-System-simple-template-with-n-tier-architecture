@@ -58,9 +58,6 @@ D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\DAL.pdb
 D:\ASP.Net Core\ERP\ERP\obj\Debug\netcoreapp3.1\ERP.csprojAssemblyReference.cache
 D:\ASP.Net Core\ERP\ERP\obj\Debug\netcoreapp3.1\ERP.AssemblyInfoInputs.cache
 D:\ASP.Net Core\ERP\ERP\obj\Debug\netcoreapp3.1\ERP.AssemblyInfo.cs
-D:\ASP.Net Core\ERP\ERP\obj\Debug\netcoreapp3.1\ERP.csproj.CoreCompileInputs.cache
-D:\ASP.Net Core\ERP\ERP\obj\Debug\netcoreapp3.1\ERP.MvcApplicationPartsAssemblyInfo.cs
-D:\ASP.Net Core\ERP\ERP\obj\Debug\netcoreapp3.1\ERP.MvcApplicationPartsAssemblyInfo.cache
 D:\ASP.Net Core\ERP\ERP\obj\Debug\netcoreapp3.1\ERP.RazorTargetAssemblyInfo.cache
 D:\ASP.Net Core\ERP\ERP\obj\Debug\netcoreapp3.1\ERP.csproj.CopyComplete
 D:\ASP.Net Core\ERP\ERP\obj\Debug\netcoreapp3.1\staticwebassets\ERP.StaticWebAssets.Manifest.cache
@@ -68,3 +65,11 @@ D:\ASP.Net Core\ERP\ERP\obj\Debug\netcoreapp3.1\staticwebassets\ERP.StaticWebAss
 D:\ASP.Net Core\ERP\ERP\obj\Debug\netcoreapp3.1\ERP.dll
 D:\ASP.Net Core\ERP\ERP\obj\Debug\netcoreapp3.1\ERP.pdb
 D:\ASP.Net Core\ERP\ERP\obj\Debug\netcoreapp3.1\ERP.genruntimeconfig.cache
+D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\ClientApp\angular.json
+D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\ClientApp\e2e\tsconfig.json
+D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\ClientApp\package.json
+D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\ClientApp\tsconfig.app.json
+D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\ClientApp\tsconfig.base.json
+D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\ClientApp\tsconfig.json
+D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\ClientApp\tsconfig.spec.json
+D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\ClientApp\tslint.json
