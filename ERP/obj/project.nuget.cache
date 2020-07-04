@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "icT7DnBT1K/4dR3ZDuhA1WNnjg0BryDuUk1pNqKdlifjYqlOYhQ5rRPr5S47MFPm3cqQIJhgoSUw3KZrtbE90w==",
+  "dgSpecHash": "XyVtsCPk+53tm1ZQYVAP8Le23vvyMPEAzlwIuej0ia9LLoQj7+V2PJMHWBHXx5/ZR4M7YKK9aBn6oSVyHm75YA==",
   "success": true,
   "projectFilePath": "D:\\ASP.Net Core\\ERP\\ERP\\ERP.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\Amr Elwakeel\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\3.1.4\\microsoft.aspnetcore.identity.entityframeworkcore.3.1.4.nupkg.sha512",
     "C:\\Users\\Amr Elwakeel\\.nuget\\packages\\microsoft.aspnetcore.nodeservices\\3.1.5\\microsoft.aspnetcore.nodeservices.3.1.5.nupkg.sha512",
     "C:\\Users\\Amr Elwakeel\\.nuget\\packages\\microsoft.aspnetcore.spaservices\\3.1.5\\microsoft.aspnetcore.spaservices.3.1.5.nupkg.sha512",
+    "C:\\Users\\Amr Elwakeel\\.nuget\\packages\\microsoft.aspnetcore.spaservices.extensions\\3.1.5\\microsoft.aspnetcore.spaservices.extensions.3.1.5.nupkg.sha512",
     "C:\\Users\\Amr Elwakeel\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Amr Elwakeel\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\Amr Elwakeel\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
@@ -30,6 +31,9 @@
     "C:\\Users\\Amr Elwakeel\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.5\\microsoft.extensions.configuration.binder.3.1.5.nupkg.sha512",
     "C:\\Users\\Amr Elwakeel\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.5\\microsoft.extensions.dependencyinjection.3.1.5.nupkg.sha512",
     "C:\\Users\\Amr Elwakeel\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.5\\microsoft.extensions.dependencyinjection.abstractions.3.1.5.nupkg.sha512",
+    "C:\\Users\\Amr Elwakeel\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\3.1.5\\microsoft.extensions.fileproviders.abstractions.3.1.5.nupkg.sha512",
+    "C:\\Users\\Amr Elwakeel\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\3.1.5\\microsoft.extensions.fileproviders.physical.3.1.5.nupkg.sha512",
+    "C:\\Users\\Amr Elwakeel\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\3.1.5\\microsoft.extensions.filesystemglobbing.3.1.5.nupkg.sha512",
     "C:\\Users\\Amr Elwakeel\\.nuget\\packages\\microsoft.extensions.identity.core\\3.1.4\\microsoft.extensions.identity.core.3.1.4.nupkg.sha512",
     "C:\\Users\\Amr Elwakeel\\.nuget\\packages\\microsoft.extensions.identity.stores\\3.1.4\\microsoft.extensions.identity.stores.3.1.4.nupkg.sha512",
     "C:\\Users\\Amr Elwakeel\\.nuget\\packages\\microsoft.extensions.logging\\3.1.5\\microsoft.extensions.logging.3.1.5.nupkg.sha512",
@@ -43,6 +47,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Amr Elwakeel\\.nuget\\packages\\microsoft.openapi\\1.1.4\\microsoft.openapi.1.1.4.nupkg.sha512",
+    "C:\\Users\\Amr Elwakeel\\.nuget\\packages\\microsoft.typescript.msbuild\\3.9.5\\microsoft.typescript.msbuild.3.9.5.nupkg.sha512",
     "C:\\Users\\Amr Elwakeel\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\Amr Elwakeel\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
