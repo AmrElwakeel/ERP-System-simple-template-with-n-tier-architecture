@@ -25,6 +25,8 @@
     <Content Include="ClientApp\package.json" />
     <Content Include="ClientApp\src\app\app.component.css" />
     <Content Include="ClientApp\src\app\app.component.html" />
+    <Content Include="ClientApp\src\app\demo\test\test.component.css" />
+    <Content Include="ClientApp\src\app\demo\test\test.component.html" />
     <Content Include="ClientApp\src\favicon.ico" />
     <Content Include="ClientApp\src\index.html" />
     <Content Include="ClientApp\src\styles.css" />
@@ -79,6 +81,8 @@
     <TypeScriptCompile Include="ClientApp\src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\app.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\app.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\demo\test\test.component.spec.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\demo\test\test.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="ClientApp\src\environments\environment.ts" />
     <TypeScriptCompile Include="ClientApp\src\main.ts" />
