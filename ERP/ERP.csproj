@@ -41,6 +41,10 @@
     <None Include="ClientApp\.gitignore" />
     <None Include="ClientApp\e2e\protractor.conf.js" />
     <None Include="ClientApp\karma.conf.js" />
+    <None Include="ClientApp\out-tsc\e2e\app.e2e-spec.js" />
+    <None Include="ClientApp\out-tsc\e2e\app.e2e-spec.js.map" />
+    <None Include="ClientApp\out-tsc\e2e\app.po.js" />
+    <None Include="ClientApp\out-tsc\e2e\app.po.js.map" />
     <None Include="ClientApp\README.md" />
     <None Include="ClientApp\src\assets\.gitkeep" />
   </ItemGroup>
