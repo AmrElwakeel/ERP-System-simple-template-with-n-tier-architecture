@@ -1,14 +1,5 @@
 D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\appsettings.json
-D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\ClientApp\angular.json
-D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\ClientApp\e2e\tsconfig.json
-D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\ClientApp\package-lock.json
-D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\ClientApp\package.json
-D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\ClientApp\tsconfig.app.json
-D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\ClientApp\tsconfig.base.json
-D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\ClientApp\tsconfig.json
-D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\ClientApp\tsconfig.spec.json
-D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\ClientApp\tslint.json
 D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.json
 D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.local.json

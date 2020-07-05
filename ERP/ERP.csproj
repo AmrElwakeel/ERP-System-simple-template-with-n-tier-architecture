@@ -19,6 +19,33 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="ClientApp\angular.json" />
+    <Content Include="ClientApp\e2e\tsconfig.json" />
+    <Content Include="ClientApp\package-lock.json" />
+    <Content Include="ClientApp\package.json" />
+    <Content Include="ClientApp\src\app\app.component.css" />
+    <Content Include="ClientApp\src\app\app.component.html" />
+    <Content Include="ClientApp\src\favicon.ico" />
+    <Content Include="ClientApp\src\index.html" />
+    <Content Include="ClientApp\src\styles.css" />
+    <Content Include="ClientApp\tsconfig.app.json" />
+    <Content Include="ClientApp\tsconfig.base.json" />
+    <Content Include="ClientApp\tsconfig.json" />
+    <Content Include="ClientApp\tsconfig.spec.json" />
+    <Content Include="ClientApp\tslint.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="ClientApp\.browserslistrc" />
+    <None Include="ClientApp\.editorconfig" />
+    <None Include="ClientApp\.gitignore" />
+    <None Include="ClientApp\e2e\protractor.conf.js" />
+    <None Include="ClientApp\karma.conf.js" />
+    <None Include="ClientApp\README.md" />
+    <None Include="ClientApp\src\assets\.gitkeep" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="9.0.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="3.1.5" />
@@ -39,6 +66,20 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\e2e\src\app.e2e-spec.ts" />
+    <TypeScriptCompile Include="ClientApp\e2e\src\app.po.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\app-routing.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\app.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\app.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="ClientApp\src\environments\environment.ts" />
+    <TypeScriptCompile Include="ClientApp\src\main.ts" />
+    <TypeScriptCompile Include="ClientApp\src\polyfills.ts" />
+    <TypeScriptCompile Include="ClientApp\src\test.ts" />
   </ItemGroup>
 
 
