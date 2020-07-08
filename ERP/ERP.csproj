@@ -31,8 +31,6 @@
     <Content Include="ClientApp\src\app\Account\register\register.component.html" />
     <Content Include="ClientApp\src\app\app.component.css" />
     <Content Include="ClientApp\src\app\app.component.html" />
-    <Content Include="ClientApp\src\app\demo\test\test.component.css" />
-    <Content Include="ClientApp\src\app\demo\test\test.component.html" />
     <Content Include="ClientApp\src\app\Erp\erp-layout\erp-layout.component.css" />
     <Content Include="ClientApp\src\app\Erp\erp-layout\erp-layout.component.html" />
     <Content Include="ClientApp\src\app\Erp\index\index.component.css" />
@@ -96,8 +94,6 @@
     <TypeScriptCompile Include="ClientApp\src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\app.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\app.module.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\demo\test\test.component.spec.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\demo\test\test.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\Erp\erp-layout\erp-layout.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\Erp\index\index.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\Erp\notfound\notfound.component.ts" />
