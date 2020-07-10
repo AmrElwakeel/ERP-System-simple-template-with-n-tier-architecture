@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { RegisterComponent } from './Account/register/register.component';
 import { ErpLayoutComponent } from './Erp/erp-layout/erp-layout.component';
 import { IndexComponent } from './Erp/index/index.component';
 import { NotfoundComponent } from './Erp/notfound/notfound.component';
+import { DepartmentComponent } from './erp/department/department.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { NotfoundComponent } from './Erp/notfound/notfound.component';
     RegisterComponent,
     ErpLayoutComponent,
     IndexComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    DepartmentComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

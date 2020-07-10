@@ -31,6 +31,8 @@
     <Content Include="ClientApp\src\app\Account\register\register.component.html" />
     <Content Include="ClientApp\src\app\app.component.css" />
     <Content Include="ClientApp\src\app\app.component.html" />
+    <Content Include="ClientApp\src\app\Erp\department\department.component.css" />
+    <Content Include="ClientApp\src\app\Erp\department\department.component.html" />
     <Content Include="ClientApp\src\app\Erp\erp-layout\erp-layout.component.css" />
     <Content Include="ClientApp\src\app\Erp\erp-layout\erp-layout.component.html" />
     <Content Include="ClientApp\src\app\Erp\index\index.component.css" />
@@ -94,9 +96,13 @@
     <TypeScriptCompile Include="ClientApp\src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\app.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\app.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\Erp\department\department.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\Erp\erp-layout\erp-layout.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\Erp\index\index.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\Erp\notfound\notfound.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\Models\department.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\Services\DepartmentServices\department.service.spec.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\Services\DepartmentServices\department.service.ts" />
     <TypeScriptCompile Include="ClientApp\src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="ClientApp\src\environments\environment.ts" />
     <TypeScriptCompile Include="ClientApp\src\main.ts" />
