@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ERP.Dto.CasherDto;
 using ERP.Dto.DepartmentDto;
+using ERP.Dto.ApplicationUserDto;
 
 namespace ERP.Dto
 {
@@ -41,6 +42,11 @@ namespace ERP.Dto
             CreateMap<Department, DepartmentViewDto>();
             CreateMap<CreateDepartmentDto,Department>();
             CreateMap<UpdateDepartmentDto, Department>();
+
+
+            CreateMap<CreateUserDto, ApplicationUser>()
+                .ForMember(dest => dest.UserName, obj => obj.MapFrom(src => src.Name))
+                .ForMember(dest => dest.Email, obj => obj.MapFrom(src => src.Name + "Erp.com"));
         }
     }
 }

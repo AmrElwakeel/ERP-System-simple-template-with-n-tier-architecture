@@ -1,7 +1,10 @@
 using AutoMapper;
 using DAL;
+using DAL.Core;
+using DAL.Core.Inrefaces;
 using DAL.Entities;
 using ERP.Dto;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -10,7 +13,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System;
+using System.Text;
 
 namespace ERP
 {
@@ -34,7 +40,7 @@ namespace ERP
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
-
+            services.AddScoped<IAccountManager, AccountManager>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddAutoMapper(typeof(AutoMapperProfile));
@@ -56,13 +62,36 @@ namespace ERP
 
             services.AddControllers();
 
-            services.AddSpaStaticFiles(config =>
+            //Jwt Authentication
+            var key = Encoding.UTF8.GetBytes(Configuration["ApplicationSettings:JwtSecritKey"].ToString());
+            services.AddAuthentication(auth =>
             {
-                config.RootPath = "ClientApp/dist";
+                auth.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                auth.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                auth.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(x=> {
+                x.RequireHttpsMetadata = false;
+                x.SaveToken = false;
+                x.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey=new SymmetricSecurityKey(key),
+                    ValidateIssuer=false,
+                    ValidateAudience=false,
+                    ClockSkew=TimeSpan.Zero,
+                    
+
+                };
             });
 
 
 
+
+
+            services.AddSpaStaticFiles(config =>
+            {
+                config.RootPath = "ClientApp/dist";
+            });
             #region Swagger
             services.AddSwaggerGen(c =>
             {
@@ -100,6 +129,13 @@ namespace ERP
             }
 
             app.UseRouting();
+
+            app.UseCors(builder =>
+            builder.AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            );
+
 
             app.UseAuthorization();
 

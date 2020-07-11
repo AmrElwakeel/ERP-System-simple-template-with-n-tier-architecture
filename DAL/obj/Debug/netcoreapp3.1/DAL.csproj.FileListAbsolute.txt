@@ -4,6 +4,5 @@ D:\ASP.Net Core\ERP\DAL\bin\Debug\netcoreapp3.1\DAL.pdb
 D:\ASP.Net Core\ERP\DAL\obj\Debug\netcoreapp3.1\DAL.csprojAssemblyReference.cache
 D:\ASP.Net Core\ERP\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfoInputs.cache
 D:\ASP.Net Core\ERP\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfo.cs
-D:\ASP.Net Core\ERP\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CoreCompileInputs.cache
 D:\ASP.Net Core\ERP\DAL\obj\Debug\netcoreapp3.1\DAL.dll
 D:\ASP.Net Core\ERP\DAL\obj\Debug\netcoreapp3.1\DAL.pdb
