@@ -28,8 +28,12 @@ namespace ERP.Controllers
         public async Task<ActionResult<Tuple<bool,string[]>>> Create(CreateUserDto createUserDto)
         {
             var user= mapper.Map<CreateUserDto, ApplicationUser>(createUserDto);
+            var resault = await accountManager.CreateUserAsync(user, createUserDto.Password);
 
-            return await accountManager.CreateUserAsync(user,createUserDto.Password);
+            if(!resault.Item1)
+                return BadRequest(new {errors=resault.Item2});
+
+            return Ok(new { succeeded=resault.Item1,msg= "Created Successfully" });
         }
     }
 }

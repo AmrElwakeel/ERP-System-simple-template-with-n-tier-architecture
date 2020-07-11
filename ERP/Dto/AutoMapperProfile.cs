@@ -46,7 +46,7 @@ namespace ERP.Dto
 
             CreateMap<CreateUserDto, ApplicationUser>()
                 .ForMember(dest => dest.UserName, obj => obj.MapFrom(src => src.Name))
-                .ForMember(dest => dest.Email, obj => obj.MapFrom(src => src.Name + "Erp.com"));
+                .ForMember(dest => dest.Email, obj => obj.MapFrom(src => src.Name + "@Erp.com"));
         }
     }
 }

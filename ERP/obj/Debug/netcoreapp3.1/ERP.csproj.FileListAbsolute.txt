@@ -75,3 +75,13 @@ D:\ASP.Net Core\ERP\ERP\obj\Debug\netcoreapp3.1\staticwebassets\ERP.StaticWebAss
 D:\ASP.Net Core\ERP\ERP\obj\Debug\netcoreapp3.1\ERP.dll
 D:\ASP.Net Core\ERP\ERP\obj\Debug\netcoreapp3.1\ERP.pdb
 D:\ASP.Net Core\ERP\ERP\obj\Debug\netcoreapp3.1\ERP.genruntimeconfig.cache
+D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\ASP.Net Core\ERP\ERP\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\ASP.Net Core\ERP\ERP\obj\Debug\netcoreapp3.1\ERP.csproj.CoreCompileInputs.cache
+D:\ASP.Net Core\ERP\ERP\obj\Debug\netcoreapp3.1\ERP.MvcApplicationPartsAssemblyInfo.cs
+D:\ASP.Net Core\ERP\ERP\obj\Debug\netcoreapp3.1\ERP.MvcApplicationPartsAssemblyInfo.cache
