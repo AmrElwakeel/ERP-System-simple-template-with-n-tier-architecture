@@ -1,0 +1,81 @@
+<p>{{departmentForm.value | json}}</p>
+
+<form [formGroup]="departmentForm" (ngSubmit)="onSubmit()" class="form-horizontal">
+    <div class="panal panal-primary">
+        <div class="panal-heading">
+            <h3 class="panal-title"> Create Deparment</h3>
+        </div>
+        <div class="panal-body">
+            <div class="form-group" [ngClass]="{'has-error':formErrors.fullName}">
+                <label class="col-sm-2 control-label" for="fullName">Full Name</label>
+                <div class="col-sm-8 has-error">
+                    <input type="text" name="fullName" formControlName="fullName" class="form-control" (blur)="logValidationErrors()">
+                    <span *ngIf="formErrors.fullName">
+                        {{formErrors.fullName}}
+                    </span>
+                </div>
+            </div>
+            <div class="form-group" [ngClass]="{'has-error':formErrors.email}">
+                <label class="col-sm-2 control-label" for="email">Email</label>
+                <div class="col-sm-8">
+                    <input type="text" name="email" formControlName="email" class="form-control" (blur)="logValidationErrors()">
+                    <span *ngIf="formErrors.email">
+                        {{formErrors.email}}
+                    </span>
+                </div>
+            </div>
+            <div class="form-group" [ngClass]="{'has-error':formErrors.phone}">
+                <label class="col-sm-2 control-label" for="phone">Email</label>
+                <div class="col-sm-8">
+                    <input type="text" name="phone" formControlName="phone" class="form-control" (blur)="logValidationErrors()">
+                    <span *ngIf="formErrors.phone">
+                        {{formErrors.phone}}
+                    </span>
+                </div>
+            </div>
+            <div formGroupName="skills">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="skillName">Skill</label>
+                    <div class="col-sm-4" [ngClass]="{'has-error':formErrors.skillName}">
+                        <input type="text" name="skillName" placeholder="skillName" formControlName="skillName"
+                            class="form-control" (blur)="logValidationErrors()">
+                            <span *ngIf="formErrors.skillName">
+                                {{formErrors.skillName}}
+                            </span>
+                    </div>
+                    <div class="col-sm-4" [ngClass]="{'has-error':formErrors.experinceInYears}">
+                        <input type="text" name="experinceInYears" placeholder="experinceInYears"
+                            formControlName="experinceInYears" class="form-control" (blur)="logValidationErrors()">
+                            <span *ngIf="formErrors.experinceInYears">
+                                {{formErrors.experinceInYears}}
+                            </span>
+                    </div>
+                </div>
+                <div class="form-group" [ngClass]="{'has-error':formErrors.proficiency}">
+                    <label class="col-sm-2 control-label" for="email">Proficiency</label>
+                    <div class="col-sm-8">
+                        <label class="radio-inline">
+                            <input id="proficiency" type="radio" value="Beginner" formControlName="proficiency" (blur)="logValidationErrors()">Beginner
+                        </label>
+                        <label class="radio-inline">
+                            <input id="proficiency" type="radio" value="Intermidiate" formControlName="proficiency" (blur)="logValidationErrors()">Intermidiate
+                        </label>
+                        <label class="radio-inline">
+                            <input id="proficiency" type="radio" value="Advanced" formControlName="proficiency" (blur)="logValidationErrors()">Advanced
+                        </label>
+                    </div>
+                    <span *ngIf="formErrors.proficiency">
+                        {{formErrors.proficiency}}
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="panal-footer">
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" [disabled]="departmentForm.invalid" value="Save">
+                <input type="button" class="btn btn-primary" (click)="onBind()" value="Bind Data">
+            </div>
+        </div>
+        {{departmentForm.valid}}
+    </div>
+</form>

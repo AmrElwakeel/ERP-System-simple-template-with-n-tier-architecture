@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule} from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { ErpLayoutComponent } from './Erp/erp-layout/erp-layout.component';
 import { IndexComponent } from './Erp/index/index.component';
 import { NotfoundComponent } from './Erp/notfound/notfound.component';
 import { DepartmentComponent } from './erp/department/department.component';
+import { CreatedepartmentComponent } from './erp/department/createdepartment/createdepartment.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,15 @@ import { DepartmentComponent } from './erp/department/department.component';
     ErpLayoutComponent,
     IndexComponent,
     NotfoundComponent,
-    DepartmentComponent
+    DepartmentComponent,
+    CreatedepartmentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,6 +8,7 @@ import { ErpLayoutComponent } from './Erp/erp-layout/erp-layout.component';
 import { IndexComponent } from './Erp/index/index.component';
 import { NotfoundComponent } from './Erp/notfound/notfound.component';
 import { DepartmentComponent } from './erp/department/department.component';
+import { CreatedepartmentComponent } from './erp/department/createdepartment/createdepartment.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
     children:[
       {path:'index',component:IndexComponent},
       {path:'department',component:DepartmentComponent},
+      {path:'createdepartment',component:CreatedepartmentComponent},
       {path:'notfound',component:NotfoundComponent}
     ]
   },  
