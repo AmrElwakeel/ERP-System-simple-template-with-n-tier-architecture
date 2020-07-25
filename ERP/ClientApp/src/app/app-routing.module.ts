@@ -12,24 +12,28 @@ import { CreatedepartmentComponent } from './erp/department/createdepartment/cre
 
 
 const routes: Routes = [
-  {path:'',redirectTo:'/index',pathMatch:'full'},
+  { path: '', redirectTo: '/index', pathMatch: 'full' },
   {
-    path:'',component:ErpLayoutComponent,
-    children:[
-      {path:'index',component:IndexComponent},
-      {path:'department',component:DepartmentComponent},
-      {path:'createdepartment',component:CreatedepartmentComponent},
-      {path:'notfound',component:NotfoundComponent}
-    ]
-  },  
-  {
-    path:'account',component:AccountLayoutComponent,
-    children:[
-      {path:'register',component:RegisterComponent},
-      {path:'login',component:LoginComponent}
+    path: '', component: ErpLayoutComponent,
+    children: [
+      { path: 'index', component: IndexComponent },
+      {
+        path: 'department', children: [
+          { path: '', component: DepartmentComponent },
+          { path: 'create', component: CreatedepartmentComponent }
+        ]
+      },
+      { path: 'notfound', component: NotfoundComponent }
     ]
   },
-  {path:'**',redirectTo:'/notfound',pathMatch:'full'}
+  {
+    path: 'account', component: AccountLayoutComponent,
+    children: [
+      { path: 'register', component: RegisterComponent },
+      { path: 'login', component: LoginComponent }
+    ]
+  },
+  { path: '**', redirectTo: '/notfound', pathMatch: 'full' }
 ];
 
 @NgModule({
